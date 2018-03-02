@@ -28,7 +28,7 @@ void SimpleGraspActionServer::shutdownImpl(){
     ROS_INFO("Shutting down GraspServer");
 }
 
-void SimpleGraspActionServer::actionCallbackImpl(const ActionGoalHandleT& goal)
+void SimpleGraspActionServer::actionCallbackImpl(const ActionGoalHandleT goal)
 {
     const manipulation_msgs::Grasp& grasp = goal.getGoal()->grasp.grasp;
     if (goal.getGoal()->is_grasp){
@@ -40,7 +40,7 @@ void SimpleGraspActionServer::actionCallbackImpl(const ActionGoalHandleT& goal)
     }
 }
 
-void SimpleGraspActionServer::actionCancelCallbackImpl(ActionGoalHandleT& goal)
+void SimpleGraspActionServer::actionCancelCallbackImpl(ActionGoalHandleT goal)
 {
     ROS_INFO_STREAM("SimpleGraspActionServer: Received cancel goal");
     graspControlClient.cancelGoal();

@@ -58,13 +58,13 @@ protected:
      * See superclass. This remains pure virtual and has to be implemented
      * by subclasses.
      */
-    virtual void actionCallbackImpl(const ActionGoalHandleT& goal) = 0;
+    virtual void actionCallbackImpl(const ActionGoalHandleT goal) = 0;
 
     /**
      * See superclass. This may be implemented by subclasses if required,
      * and does nothing by default.
      */
-    virtual void actionCancelCallbackImpl(ActionGoalHandleT& goal) {}
+    virtual void actionCancelCallbackImpl(ActionGoalHandleT goal) {}
 
     /**
      * See superclass. While subclasses may re-implement this, it
@@ -72,7 +72,7 @@ protected:
      * and executionEligiblePostCheck() instead,
      * which is called from here.
      */
-    virtual bool canAccept(const ActionGoalHandleT& goal); 
+    virtual bool canAccept(const ActionGoalHandleT goal); 
 
     /**
      * Checks additional requirements, aside from eligibility 

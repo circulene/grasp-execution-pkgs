@@ -43,9 +43,9 @@ private:
 
     virtual void shutdownImpl();
 
-    virtual void actionCallbackImpl(const ActionGoalHandleT& goal);
+    virtual void actionCallbackImpl(const ActionGoalHandleT goal);
 
-    virtual void actionCancelCallbackImpl(ActionGoalHandleT& goal);
+    virtual void actionCancelCallbackImpl(ActionGoalHandleT goal);
 
     virtual bool executionEligiblePreCheck(const GoalT& goal);
 

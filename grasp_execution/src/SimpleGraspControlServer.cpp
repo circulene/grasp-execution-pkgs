@@ -60,7 +60,7 @@ void SimpleGraspControlServer::cancelGripperCheckThread()
 }
 
 
-bool SimpleGraspControlServer::canAccept(const ActionGoalHandleT& goal)
+bool SimpleGraspControlServer::canAccept(const ActionGoalHandleT goal)
 {
   if (!initialized) {
   ROS_ERROR("Action server not initialised, can't accept goal");
@@ -105,7 +105,7 @@ bool SimpleGraspControlServer::canAccept(const ActionGoalHandleT& goal)
   return true;
 }
 
-void SimpleGraspControlServer::actionCallbackImpl(const ActionGoalHandleT& goal)
+void SimpleGraspControlServer::actionCallbackImpl(const ActionGoalHandleT goal)
 {
   // ROS_INFO("SimpleGraspControlServer: Goal accepted");
 
@@ -140,7 +140,7 @@ void SimpleGraspControlServer::actionCallbackImpl(const ActionGoalHandleT& goal)
   gripper_check_thread = new baselib_binding::thread(updateGrippersCheckLoop, this, gripper_angles_check_freq);
 }
 
-void SimpleGraspControlServer::actionCancelCallbackImpl(ActionGoalHandleT& goal)
+void SimpleGraspControlServer::actionCancelCallbackImpl(ActionGoalHandleT goal)
 {
   cancelGripperCheckThread();
   joint_state_subscriber.setActive(false);

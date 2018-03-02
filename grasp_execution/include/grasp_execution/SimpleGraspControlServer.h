@@ -71,9 +71,9 @@ class SimpleGraspControlServer:
 	void shutdownImpl();
 
 
-    virtual bool canAccept(const ActionGoalHandleT& goal);
-    virtual void actionCallbackImpl(const ActionGoalHandleT& goal);
-    virtual void actionCancelCallbackImpl(ActionGoalHandleT& goal);
+    virtual bool canAccept(const ActionGoalHandleT goal);
+    virtual void actionCallbackImpl(const ActionGoalHandleT goal);
+    virtual void actionCancelCallbackImpl(ActionGoalHandleT goal);
 
 
 	

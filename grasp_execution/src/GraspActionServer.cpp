@@ -10,7 +10,7 @@ GraspActionServer::GraspActionServer(ros::NodeHandle& _node,
 {
 }
 
-bool GraspActionServer::canAccept(const ActionGoalHandleT& goal)
+bool GraspActionServer::canAccept(const ActionGoalHandleT goal)
 {
     GoalConstPtrT graspGoal = goal.getGoal();
 
